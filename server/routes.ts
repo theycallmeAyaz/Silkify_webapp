@@ -2,6 +2,7 @@ import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { transformImage } from "./openai";
+import { transformImageWithGemini } from "./gemini";
 import multer from "multer";
 import { styleTransformSchema } from "@shared/schema";
 import { z } from "zod";
@@ -73,8 +74,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ message: "No image data provided" });
       }
 
-      // Perform the image transformation using OpenAI
-      const transformedImageUrl = await transformImage(imageBase64, style);
+      // Perform the image transformation using Gemini instead of OpenAI
+      console.log(`Starting image transformation with style: ${style}`);
+      const transformedImageUrl = await transformImageWithGemini(imageBase64, style);
+      console.log("Image transformation completed successfully");
 
       // Return the transformed image URL
       return res.status(200).json({ transformedImageUrl });
