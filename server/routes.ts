@@ -8,8 +8,8 @@
 import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { transformImage } from "./openai";
 import { transformImageWithGemini } from "./gemini";
+import { transformImage } from "./openai";
 import multer from "multer";
 import { styleTransformSchema } from "@shared/schema";
 import { z } from "zod";
@@ -122,8 +122,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Log the start of transformation for debugging
       console.log(`Starting image transformation with style: ${style}`);
       
-      // Process the image using Gemini AI and get the transformed image URL
-      const transformedImageUrl = await transformImageWithGemini(imageBase64, style);
+      // Process the image using OpenAI instead of Gemini AI
+      // This uses OpenAI's DALL-E 3 for more reliable image transformations
+      const transformedImageUrl = await transformImage(imageBase64, style);
       console.log("Image transformation completed successfully");
 
       // Return the URL of the transformed image to the client
