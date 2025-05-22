@@ -42,8 +42,9 @@ export async function transformImageWithGemini(
     // Get the appropriate style prompt from our predefined prompts
     const prompt = STYLE_PROMPTS[style];
     
-    // Get the Gemini Pro Vision model which can process both text and images
-    const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
+    // Use the newer Gemini 1.5 Flash model which can process both text and images
+    // The older gemini-pro-vision model was deprecated on July 12, 2024
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
     // Create image parts for the model in the format expected by Gemini
     const imageParts = [
