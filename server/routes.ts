@@ -1,7 +1,7 @@
 /**
  * API Routes Configuration
  * 
- * This file defines all the API endpoints for the ArtStyler application,
+ * This file defines all the API endpoints for the Silkify application,
  * handling image uploads, style retrieval, and image transformations.
  */
 

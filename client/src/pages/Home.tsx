@@ -38,7 +38,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         <header className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            ArtStyler
+            Silkify
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Transform your images into different art styles using AI. Upload an image and choose a style to see the magic happen.
@@ -62,7 +62,7 @@ export default function Home() {
         </main>
 
         <footer className="mt-16 text-center text-gray-500 text-sm">
-          <p>Powered by AI image style transfer technology. &copy; {new Date().getFullYear()} ArtStyler</p>
+          <p>Powered by AI image style transfer technology. &copy; {new Date().getFullYear()} Silkify</p>
         </footer>
       </div>
     </div>
