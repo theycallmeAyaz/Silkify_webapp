@@ -2,15 +2,15 @@ import OpenAI from "openai";
 import fs from "fs";
 import { STYLE_PROMPTS } from "@shared/types";
 
-if (!process.env.OPENAI_API_KEY) {
-  console.warn("Missing OPENAI_API_KEY environment variable");
-}
+// Hard-coded OpenAI API key for local development
+// NOTE: In production, you should use environment variables instead
+// Replace "YOUR_API_KEY_HERE" with your actual OpenAI API key
+const OPENAI_API_KEY = "YOUR_API_KEY_HERE";
 
 // the newest OpenAI model is "gpt-4o" which was released May 13, 2024. do not change this unless explicitly requested by the user
-// Make sure we're using the API key correctly
-console.log("OpenAI API Key is configured (first few chars):", process.env.OPENAI_API_KEY?.substring(0, 5) + "...");
+console.log("Using hard-coded OpenAI API Key");
 const openai = new OpenAI({ 
-  apiKey: process.env.OPENAI_API_KEY || "",
+  apiKey: OPENAI_API_KEY,
 });
 
 /**
