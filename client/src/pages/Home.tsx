@@ -62,7 +62,7 @@ export default function Home() {
         </main>
 
         <footer className="mt-16 text-center text-gray-500 text-sm">
-          <p>Powered by AI image style transfer technology. &copy; {new Date().getFullYear()} Silkify</p>
+          <p>Powered by AI image style transfer technology. &copy; {new Date().getFullYear()} @Silkify Team</p>
         </footer>
       </div>
     </div>

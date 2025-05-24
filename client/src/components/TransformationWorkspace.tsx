@@ -105,7 +105,7 @@ export default function TransformationWorkspace({
     const link = document.createElement("a");
     link.href = transformedImageUrl;
     // Generate a filename with the style and timestamp
-    link.download = `artstyler-${selectedStyle}-${new Date().getTime()}.png`;
+    link.download = `Silkify-${selectedStyle}-${new Date().getTime()}.png`;
     // Add to DOM, click it, then remove it
     document.body.appendChild(link);
     link.click();

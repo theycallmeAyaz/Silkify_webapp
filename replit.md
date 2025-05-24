@@ -1,8 +1,8 @@
-# ArtStyler Image Transformation Application
+# Silkify Image Transformation Application
 
 ## Overview
 
-ArtStyler is a web application for transforming images into different art styles using AI. Users can upload images and convert them into various styles like Lego, Anime, Ghibli, Futuristic, or Vintage using OpenAI's image generation capabilities. The application features a React frontend with a modern UI using shadcn/ui components and an Express backend that handles image processing through OpenAI's API.
+Silkify is a web application for transforming images into different art styles using AI. Users can upload images and convert them into various styles like Lego, Anime, Ghibli, Futuristic, or Vintage using OpenAI's image generation capabilities. The application features a React frontend with a modern UI using shadcn/ui components and an Express backend that handles image processing through OpenAI's API.
 
 ## User Preferences
 
@@ -91,7 +91,7 @@ Preferred communication style: Simple, everyday language.
 
 ## Deployment Strategy
 
-The application is configured for deployment on Replit with:
+The application is configured for deployment on with:
 
 1. **Build Process**:
    - Vite builds the frontend into static assets
@@ -106,5 +106,5 @@ The application is configured for deployment on Replit with:
    - Drizzle ORM for database schema management and migrations
 
 4. **Scaling**:
-   - Configured for autoscaling deployment on Replit
+   - Configured for autoscaling deployment
    - Ports properly exposed for web access
